@@ -1,0 +1,51 @@
+## BLoC
+
+Business logic components (BLoC) allow you to separate the business logic
+from the UI (presentation layer). Writing code in BLoC makes it easier to
+write and reuse tests. In simple terms, BLoC accepts a stream of events,
+processes the data based on events, and produces the output as states.
+
+# Important BLoC Concepts
+1. Events - Events tell BLoC to do something. An event can be fired from
+    anywhere, such as from a UI widget.
+
+2. BLoC - BLoC is a man in the middle. All the busines logic sits inside
+    the BLoC file. It simply accepts events, performs the logic, and outputs
+    the states.
+
+3. States - States represent the information to be processed by any widget.
+    A widget changes itself based on the state.
+
+4. Cubit - Cubit is a simpler version of the BLoC pattern. It eliminates the
+    the need to write events. It exposes direct functions, which can result
+    in appropriate states. Writing a Cubit instead of BLoC reduces boilerplate
+    code, making the code easier to read.
+
+There are three separate main layers operating in BLoC:
+1. Presentation Layer
+2. Business Layer
+3. Data Layer
+    - Repositories
+    - Data providers
+    - Models
+
+* A model is a blueprint to the data your application to work with.
+* A data provider is an API for your app to communicate with the data sources.
+
+# Routing in Flutter
+1. Anonymous Routing
+    - Navigating without a route name
+    - Only the screens are used to navigate
+    - Suitable for small applications
+
+2. Named Routing
+    - Navigating with a route name
+    - Route names and their associated screens are set up inside routes
+      parameter of MaterialApp widget
+    - Suitable for small to medium applications
+
+3. Generated Routing
+    - Navigating with a route name
+    - Route names and their associated screens are set up inside a separate
+      onGenerateRoute function
+    - Suitable for large applications
