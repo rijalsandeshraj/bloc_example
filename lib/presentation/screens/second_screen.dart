@@ -53,6 +53,7 @@ class SecondScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 FloatingActionButton(
+                  heroTag: 2,
                   backgroundColor: color,
                   onPressed: () {
                     BlocProvider.of<CounterCubit>(context).decrement();
@@ -62,6 +63,7 @@ class SecondScreen extends StatelessWidget {
                   child: const Icon(Icons.remove),
                 ),
                 FloatingActionButton(
+                  heroTag: 3,
                   backgroundColor: color,
                   onPressed: () {
                     BlocProvider.of<CounterCubit>(context).increment();
